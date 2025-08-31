@@ -1,8 +1,8 @@
-﻿using MareSynchronos.API.Data;
-using MareSynchronos.FileCache;
-using MareSynchronos.Services.CharaData.Models;
+﻿using UnsungSync.API.Data;
+using UnsungSync.FileCache;
+using UnsungSync.Services.CharaData.Models;
 
-namespace MareSynchronos.Services.CharaData;
+namespace UnsungSync.Services.CharaData;
 
 public sealed class MareCharaFileDataFactory
 {

@@ -1,6 +1,6 @@
-﻿using MareSynchronos.API.Dto.CharaData;
+﻿using UnsungSync.API.Dto.CharaData;
 
-namespace MareSynchronos.Services.CharaData.Models;
+namespace UnsungSync.Services.CharaData.Models;
 
 public sealed record CharaDataMetaInfoExtendedDto : CharaDataMetaInfoDto
 {

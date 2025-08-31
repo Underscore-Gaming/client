@@ -1,16 +1,16 @@
 ﻿using Dalamud.Bindings.ImGui;
 using Dalamud.Interface.Utility;
 using Dalamud.Interface.Utility.Raii;
-using MareSynchronos.API.Data.Enum;
-using MareSynchronos.API.Data.Extensions;
-using MareSynchronos.PlayerData.Pairs;
-using MareSynchronos.Services;
-using MareSynchronos.Services.Mediator;
-using MareSynchronos.Utils;
-using MareSynchronos.WebAPI;
+using UnsungSync.API.Data.Enum;
+using UnsungSync.API.Data.Extensions;
+using UnsungSync.PlayerData.Pairs;
+using UnsungSync.Services;
+using UnsungSync.Services.Mediator;
+using UnsungSync.Utils;
+using UnsungSync.WebAPI;
 using Microsoft.Extensions.Logging;
 
-namespace MareSynchronos.UI;
+namespace UnsungSync.UI;
 
 public class PermissionWindowUI : WindowMediatorSubscriberBase
 {
@@ -22,7 +22,7 @@ public class PermissionWindowUI : WindowMediatorSubscriberBase
 
     public PermissionWindowUI(ILogger<PermissionWindowUI> logger, Pair pair, MareMediator mediator, UiSharedService uiSharedService,
         ApiController apiController, PerformanceCollectorService performanceCollectorService)
-        : base(logger, mediator, "Permissions for " + pair.UserData.AliasOrUID + "###MareSynchronosPermissions" + pair.UserData.UID, performanceCollectorService)
+        : base(logger, mediator, "Permissions for " + pair.UserData.AliasOrUID + "###UnsungSyncPermissions" + pair.UserData.UID, performanceCollectorService)
     {
         Pair = pair;
         _uiSharedService = uiSharedService;
@@ -175,7 +175,7 @@ public class PermissionWindowUI : WindowMediatorSubscriberBase
                 new(StringComparer.Ordinal)
             ));
         }
-        UiSharedService.AttachToolTip("This will set all permissions to your defined default permissions in the Mare Settings");
+        UiSharedService.AttachToolTip("This will set all permissions to your defined default permissions in the Unsung Sync Settings");
 
         var ySize = ImGui.GetCursorPosY() + style.FramePadding.Y * ImGuiHelpers.GlobalScale + style.FrameBorderSize;
         ImGui.SetWindowSize(new(400, ySize));

@@ -1,6 +1,6 @@
-﻿using MareSynchronos.API.Data;
+﻿using UnsungSync.API.Data;
 
-namespace MareSynchronos.Services.Events;
+namespace UnsungSync.Services.Events;
 
 public record Event
 {

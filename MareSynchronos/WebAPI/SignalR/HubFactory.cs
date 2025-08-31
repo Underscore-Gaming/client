@@ -1,8 +1,8 @@
-﻿using MareSynchronos.API.SignalR;
-using MareSynchronos.Services;
-using MareSynchronos.Services.Mediator;
-using MareSynchronos.Services.ServerConfiguration;
-using MareSynchronos.WebAPI.SignalR.Utils;
+﻿using UnsungSync.API.SignalR;
+using UnsungSync.Services;
+using UnsungSync.Services.Mediator;
+using UnsungSync.Services.ServerConfiguration;
+using UnsungSync.WebAPI.SignalR.Utils;
 using MessagePack;
 using MessagePack.Resolvers;
 using Microsoft.AspNetCore.Http.Connections;
@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.SignalR.Client;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
-namespace MareSynchronos.WebAPI.SignalR;
+namespace UnsungSync.WebAPI.SignalR;
 
 public class HubFactory : MediatorSubscriberBase
 {

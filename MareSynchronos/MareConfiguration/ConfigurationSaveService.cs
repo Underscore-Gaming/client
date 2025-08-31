@@ -1,10 +1,10 @@
-﻿using MareSynchronos.MareConfiguration.Configurations;
+﻿using UnsungSync.MareConfiguration.Configurations;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using System.Reflection;
 using System.Text.Json;
 
-namespace MareSynchronos.MareConfiguration;
+namespace UnsungSync.MareConfiguration;
 
 public class ConfigurationSaveService : IHostedService
 {

@@ -1,4 +1,4 @@
-﻿namespace MareSynchronos.MareConfiguration.Models;
+﻿namespace UnsungSync.MareConfiguration.Models;
 
 [Serializable]
 public class CharaDataFavorite

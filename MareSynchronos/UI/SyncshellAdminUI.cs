@@ -3,17 +3,17 @@ using Dalamud.Interface;
 using Dalamud.Interface.Colors;
 using Dalamud.Interface.Utility;
 using Dalamud.Interface.Utility.Raii;
-using MareSynchronos.API.Data.Enum;
-using MareSynchronos.API.Data.Extensions;
-using MareSynchronos.API.Dto.Group;
-using MareSynchronos.PlayerData.Pairs;
-using MareSynchronos.Services;
-using MareSynchronos.Services.Mediator;
-using MareSynchronos.WebAPI;
+using UnsungSync.API.Data.Enum;
+using UnsungSync.API.Data.Extensions;
+using UnsungSync.API.Dto.Group;
+using UnsungSync.PlayerData.Pairs;
+using UnsungSync.Services;
+using UnsungSync.Services.Mediator;
+using UnsungSync.WebAPI;
 using Microsoft.Extensions.Logging;
 using System.Globalization;
 
-namespace MareSynchronos.UI.Components.Popup;
+namespace UnsungSync.UI.Components.Popup;
 
 public class SyncshellAdminUI : WindowMediatorSubscriberBase
 {
@@ -259,7 +259,7 @@ public class SyncshellAdminUI : WindowMediatorSubscriberBase
                         _pruneTestTask = _apiController.GroupPrune(new(GroupFullInfo.Group), _pruneDays, execute: false);
                         _pruneTask = null;
                     }
-                    UiSharedService.AttachToolTip($"This will start the prune process for this Syncshell of inactive Mare users that have not logged in in the past {_pruneDays} days."
+                    UiSharedService.AttachToolTip($"This will start the prune process for this Syncshell of inactive Unsung Sync users that have not logged in in the past {_pruneDays} days."
                         + Environment.NewLine + "You will be able to review the amount of inactive users before executing the prune."
                         + UiSharedService.TooltipSeparator + "Note: this check excludes pinned users and moderators of this Syncshell.");
                     ImGui.SameLine();

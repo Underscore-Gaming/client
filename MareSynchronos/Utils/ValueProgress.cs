@@ -1,4 +1,4 @@
-﻿namespace MareSynchronos.Utils;
+﻿namespace UnsungSync.Utils;
 
 public class ValueProgress<T> : Progress<T>
 {

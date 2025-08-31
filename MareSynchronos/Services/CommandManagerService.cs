@@ -1,19 +1,19 @@
 ﻿using Dalamud.Game.Command;
 using Dalamud.Plugin.Services;
-using MareSynchronos.FileCache;
-using MareSynchronos.MareConfiguration;
-using MareSynchronos.MareConfiguration.Models;
-using MareSynchronos.Services.Mediator;
-using MareSynchronos.Services.ServerConfiguration;
-using MareSynchronos.UI;
-using MareSynchronos.WebAPI;
+using UnsungSync.FileCache;
+using UnsungSync.MareConfiguration;
+using UnsungSync.MareConfiguration.Models;
+using UnsungSync.Services.Mediator;
+using UnsungSync.Services.ServerConfiguration;
+using UnsungSync.UI;
+using UnsungSync.WebAPI;
 using System.Globalization;
 
-namespace MareSynchronos.Services;
+namespace UnsungSync.Services;
 
 public sealed class CommandManagerService : IDisposable
 {
-    private const string _commandName = "/mare";
+    private const string _commandName = "/unsungsync";
 
     private readonly ApiController _apiController;
     private readonly ICommandManager _commandManager;
@@ -36,13 +36,13 @@ public sealed class CommandManagerService : IDisposable
         _mareConfigService = mareConfigService;
         _commandManager.AddHandler(_commandName, new CommandInfo(OnCommand)
         {
-            HelpMessage = "Opens the Mare Synchronos UI" + Environment.NewLine + Environment.NewLine +
+            HelpMessage = "Opens the Unsung Sync UI" + Environment.NewLine + Environment.NewLine +
                 "Additionally possible commands:" + Environment.NewLine +
-                "\t /mare toggle - Disconnects from Mare, if connected. Connects to Mare, if disconnected" + Environment.NewLine +
-                "\t /mare toggle on|off - Connects or disconnects to Mare respectively" + Environment.NewLine +
-                "\t /mare gpose - Opens the Mare Character Data Hub window" + Environment.NewLine +
-                "\t /mare analyze - Opens the Mare Character Data Analysis window" + Environment.NewLine +
-                "\t /mare settings - Opens the Mare Settings window"
+                "\t /unsungsync toggle - Disconnects from Mare, if connected. Connects to Mare, if disconnected" + Environment.NewLine +
+                "\t /unsungsync toggle on|off - Connects or disconnects to Mare respectively" + Environment.NewLine +
+                "\t /unsungsync gpose - Opens the Mare Character Data Hub window" + Environment.NewLine +
+                "\t /unsungsync analyze - Opens the Mare Character Data Analysis window" + Environment.NewLine +
+                "\t /unsungsync settings - Opens the Mare Settings window"
         });
     }
 
@@ -72,7 +72,7 @@ public sealed class CommandManagerService : IDisposable
         {
             if (_apiController.ServerState == WebAPI.SignalR.Utils.ServerState.Disconnecting)
             {
-                _mediator.Publish(new NotificationMessage("Mare disconnecting", "Cannot use /toggle while Mare Synchronos is still disconnecting",
+                _mediator.Publish(new NotificationMessage("Unsung Sync disconnecting", "Cannot use /toggle while Unsung Sync is still disconnecting",
                     NotificationType.Error));
             }
 

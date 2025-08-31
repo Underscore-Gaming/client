@@ -1,18 +1,18 @@
 ﻿using Dalamud.Plugin.Services;
-using MareSynchronos.API.Data;
-using MareSynchronos.API.Data.Comparer;
-using MareSynchronos.API.Data.Extensions;
-using MareSynchronos.API.Dto.Group;
-using MareSynchronos.API.Dto.User;
-using MareSynchronos.MareConfiguration;
-using MareSynchronos.MareConfiguration.Models;
-using MareSynchronos.PlayerData.Factories;
-using MareSynchronos.Services.Events;
-using MareSynchronos.Services.Mediator;
+using UnsungSync.API.Data;
+using UnsungSync.API.Data.Comparer;
+using UnsungSync.API.Data.Extensions;
+using UnsungSync.API.Dto.Group;
+using UnsungSync.API.Dto.User;
+using UnsungSync.MareConfiguration;
+using UnsungSync.MareConfiguration.Models;
+using UnsungSync.PlayerData.Factories;
+using UnsungSync.Services.Events;
+using UnsungSync.Services.Mediator;
 using Microsoft.Extensions.Logging;
 using System.Collections.Concurrent;
 
-namespace MareSynchronos.PlayerData.Pairs;
+namespace UnsungSync.PlayerData.Pairs;
 
 public sealed class PairManager : DisposableMediatorSubscriberBase
 {

@@ -1,6 +1,6 @@
-﻿using MareSynchronos.API.Dto.Files;
+﻿using UnsungSync.API.Dto.Files;
 
-namespace MareSynchronos.WebAPI.Files.Models;
+namespace UnsungSync.WebAPI.Files.Models;
 
 public abstract class FileTransfer
 {

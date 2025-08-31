@@ -1,9 +1,9 @@
 ﻿using Dalamud.Utility;
-using MareSynchronos.API.Routes;
-using MareSynchronos.MareConfiguration;
-using MareSynchronos.MareConfiguration.Models;
-using MareSynchronos.Services.Mediator;
-using MareSynchronos.WebAPI;
+using UnsungSync.API.Routes;
+using UnsungSync.MareConfiguration;
+using UnsungSync.MareConfiguration.Models;
+using UnsungSync.Services.Mediator;
+using UnsungSync.WebAPI;
 using Microsoft.AspNetCore.Http.Connections;
 using Microsoft.Extensions.Logging;
 using System.Diagnostics;
@@ -12,7 +12,7 @@ using System.Net.Http.Json;
 using System.Security.Cryptography;
 using System.Text.Json;
 
-namespace MareSynchronos.Services.ServerConfiguration;
+namespace UnsungSync.Services.ServerConfiguration;
 
 public class ServerConfigurationManager
 {
@@ -531,8 +531,11 @@ public class ServerConfigurationManager
         {
             var baseUri = serverUri.Replace("wss://", "https://").Replace("ws://", "http://");
             var oauthCheckUri = MareAuth.GetDiscordOAuthEndpointFullPath(new Uri(baseUri));
-            var response = await _httpClient.GetFromJsonAsync<Uri?>(oauthCheckUri).ConfigureAwait(false);
-            return response;
+            var response = await _httpClient.GetAsync(oauthCheckUri).ConfigureAwait(false);
+            var body = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
+            return JsonSerializer.Deserialize<Uri?>(body);
+            //var response = await _httpClient.GetFromJsonAsync<Uri?>(oauthCheckUri).ConfigureAwait(false);
+            //return response;
         }
         catch (Exception ex)
         {

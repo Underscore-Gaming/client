@@ -1,21 +1,21 @@
-﻿using MareSynchronos.API.Data;
-using MareSynchronos.FileCache;
-using MareSynchronos.Interop.Ipc;
-using MareSynchronos.PlayerData.Factories;
-using MareSynchronos.PlayerData.Pairs;
-using MareSynchronos.Services;
-using MareSynchronos.Services.Events;
-using MareSynchronos.Services.Mediator;
-using MareSynchronos.Services.ServerConfiguration;
-using MareSynchronos.Utils;
-using MareSynchronos.WebAPI.Files;
+﻿using UnsungSync.API.Data;
+using UnsungSync.FileCache;
+using UnsungSync.Interop.Ipc;
+using UnsungSync.PlayerData.Factories;
+using UnsungSync.PlayerData.Pairs;
+using UnsungSync.Services;
+using UnsungSync.Services.Events;
+using UnsungSync.Services.Mediator;
+using UnsungSync.Services.ServerConfiguration;
+using UnsungSync.Utils;
+using UnsungSync.WebAPI.Files;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using System.Collections.Concurrent;
 using System.Diagnostics;
-using ObjectKind = MareSynchronos.API.Data.Enum.ObjectKind;
+using ObjectKind = UnsungSync.API.Data.Enum.ObjectKind;
 
-namespace MareSynchronos.PlayerData.Handlers;
+namespace UnsungSync.PlayerData.Handlers;
 
 public sealed class PairHandler : DisposableMediatorSubscriberBase
 {

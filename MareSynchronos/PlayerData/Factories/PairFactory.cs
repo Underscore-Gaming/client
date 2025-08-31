@@ -1,10 +1,10 @@
-﻿using MareSynchronos.API.Dto.User;
-using MareSynchronos.PlayerData.Pairs;
-using MareSynchronos.Services.Mediator;
-using MareSynchronos.Services.ServerConfiguration;
+﻿using UnsungSync.API.Dto.User;
+using UnsungSync.PlayerData.Pairs;
+using UnsungSync.Services.Mediator;
+using UnsungSync.Services.ServerConfiguration;
 using Microsoft.Extensions.Logging;
 
-namespace MareSynchronos.PlayerData.Factories;
+namespace UnsungSync.PlayerData.Factories;
 
 public class PairFactory
 {

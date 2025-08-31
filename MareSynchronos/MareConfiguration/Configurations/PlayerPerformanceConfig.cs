@@ -1,4 +1,4 @@
-﻿namespace MareSynchronos.MareConfiguration.Configurations;
+﻿namespace UnsungSync.MareConfiguration.Configurations;
 
 public class PlayerPerformanceConfig : IMareConfiguration
 {

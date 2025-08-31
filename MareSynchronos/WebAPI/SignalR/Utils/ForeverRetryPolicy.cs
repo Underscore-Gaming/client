@@ -1,8 +1,8 @@
-﻿using MareSynchronos.MareConfiguration.Models;
-using MareSynchronos.Services.Mediator;
+﻿using UnsungSync.MareConfiguration.Models;
+using UnsungSync.Services.Mediator;
 using Microsoft.AspNetCore.SignalR.Client;
 
-namespace MareSynchronos.WebAPI.SignalR.Utils;
+namespace UnsungSync.WebAPI.SignalR.Utils;
 
 public class ForeverRetryPolicy : IRetryPolicy
 {

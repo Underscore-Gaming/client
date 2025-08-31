@@ -1,18 +1,18 @@
 ﻿using Dalamud.Game.ClientState.Objects.SubKinds;
 using K4os.Compression.LZ4.Legacy;
-using MareSynchronos.API.Data;
-using MareSynchronos.API.Data.Enum;
-using MareSynchronos.API.Dto.CharaData;
-using MareSynchronos.FileCache;
-using MareSynchronos.PlayerData.Factories;
-using MareSynchronos.PlayerData.Handlers;
-using MareSynchronos.Services.CharaData;
-using MareSynchronos.Services.CharaData.Models;
-using MareSynchronos.Utils;
-using MareSynchronos.WebAPI.Files;
+using UnsungSync.API.Data;
+using UnsungSync.API.Data.Enum;
+using UnsungSync.API.Dto.CharaData;
+using UnsungSync.FileCache;
+using UnsungSync.PlayerData.Factories;
+using UnsungSync.PlayerData.Handlers;
+using UnsungSync.Services.CharaData;
+using UnsungSync.Services.CharaData.Models;
+using UnsungSync.Utils;
+using UnsungSync.WebAPI.Files;
 using Microsoft.Extensions.Logging;
 
-namespace MareSynchronos.Services;
+namespace UnsungSync.Services;
 
 public sealed class CharaDataFileHandler : IDisposable
 {

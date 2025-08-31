@@ -1,9 +1,9 @@
-﻿using MareSynchronos.Services.Mediator;
-using MareSynchronos.Utils;
+﻿using UnsungSync.Services.Mediator;
+using UnsungSync.Utils;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-namespace MareSynchronos.Services.Events;
+namespace UnsungSync.Services.Events;
 
 public class EventAggregator : MediatorSubscriberBase, IHostedService
 {

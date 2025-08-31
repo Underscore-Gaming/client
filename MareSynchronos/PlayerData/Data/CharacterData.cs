@@ -1,8 +1,8 @@
-﻿using MareSynchronos.API.Data;
+﻿using UnsungSync.API.Data;
 
-using MareSynchronos.API.Data.Enum;
+using UnsungSync.API.Data.Enum;
 
-namespace MareSynchronos.PlayerData.Data;
+namespace UnsungSync.PlayerData.Data;
 
 public class CharacterData
 {

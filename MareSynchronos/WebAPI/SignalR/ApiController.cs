@@ -1,28 +1,28 @@
 ﻿using Dalamud.Utility;
-using MareSynchronos.API.Data;
-using MareSynchronos.API.Data.Extensions;
-using MareSynchronos.API.Dto;
-using MareSynchronos.API.Dto.User;
-using MareSynchronos.API.SignalR;
-using MareSynchronos.MareConfiguration;
-using MareSynchronos.MareConfiguration.Models;
-using MareSynchronos.PlayerData.Pairs;
-using MareSynchronos.Services;
-using MareSynchronos.Services.Mediator;
-using MareSynchronos.Services.ServerConfiguration;
-using MareSynchronos.WebAPI.SignalR;
-using MareSynchronos.WebAPI.SignalR.Utils;
+using UnsungSync.API.Data;
+using UnsungSync.API.Data.Extensions;
+using UnsungSync.API.Dto;
+using UnsungSync.API.Dto.User;
+using UnsungSync.API.SignalR;
+using UnsungSync.MareConfiguration;
+using UnsungSync.MareConfiguration.Models;
+using UnsungSync.PlayerData.Pairs;
+using UnsungSync.Services;
+using UnsungSync.Services.Mediator;
+using UnsungSync.Services.ServerConfiguration;
+using UnsungSync.WebAPI.SignalR;
+using UnsungSync.WebAPI.SignalR.Utils;
 using Microsoft.AspNetCore.SignalR.Client;
 using Microsoft.Extensions.Logging;
 using System.Reflection;
 
-namespace MareSynchronos.WebAPI;
+namespace UnsungSync.WebAPI;
 
 #pragma warning disable MA0040
 public sealed partial class ApiController : DisposableMediatorSubscriberBase, IMareHubClient
 {
-    public const string MainServer = "Lunae Crescere Incipientis (Official Central Server)";
-    public const string MainServiceUri = "wss://maresynchronos.com";
+    public const string MainServer = "Unsung Sync";
+    public const string MainServiceUri = "wss://underscoregaming.com";
 
     private readonly DalamudUtilService _dalamudUtil;
     private readonly HubFactory _hubFactory;
@@ -240,7 +240,7 @@ public sealed partial class ApiController : DisposableMediatorSubscriberBase, IM
                         Mediator.Publish(new NotificationMessage("Client incompatible",
                             $"Your client is outdated ({currentClientVer.Major}.{currentClientVer.Minor}.{currentClientVer.Build}), current is: " +
                             $"{_connectionDto.CurrentClientVersion.Major}.{_connectionDto.CurrentClientVersion.Minor}.{_connectionDto.CurrentClientVersion.Build}. " +
-                            $"This client version is incompatible and will not be able to connect. Please update your Mare Synchronos client.",
+                            $"This client version is incompatible and will not be able to connect. Please update your Unsung Sync client.",
                             NotificationType.Error));
                     }
                     await StopConnectionAsync(ServerState.VersionMisMatch).ConfigureAwait(false);
@@ -252,7 +252,7 @@ public sealed partial class ApiController : DisposableMediatorSubscriberBase, IM
                     Mediator.Publish(new NotificationMessage("Client outdated",
                         $"Your client is outdated ({currentClientVer.Major}.{currentClientVer.Minor}.{currentClientVer.Build}), current is: " +
                         $"{_connectionDto.CurrentClientVersion.Major}.{_connectionDto.CurrentClientVersion.Minor}.{_connectionDto.CurrentClientVersion.Build}. " +
-                        $"Please keep your Mare Synchronos client up-to-date.",
+                        $"Please keep your Unsung Sync client up-to-date.",
                         NotificationType.Warning));
                 }
 
@@ -262,7 +262,7 @@ public sealed partial class ApiController : DisposableMediatorSubscriberBase, IM
                     if (!_mareConfigService.Current.DebugStopWhining)
                         Mediator.Publish(new NotificationMessage("Modified Game Files detected",
                             "Dalamud is reporting your FFXIV installation has modified game files. Any mods installed through TexTools will produce this message. " +
-                            "Mare Synchronos, Penumbra, and some other plugins assume your FFXIV installation is unmodified in order to work. " +
+                            "Unsung Sync, Penumbra, and some other plugins assume your FFXIV installation is unmodified in order to work. " +
                             "Synchronization with pairs/shells can break because of this. Exit the game, open XIVLauncher, click the arrow next to Log In " +
                             "and select 'repair game files' to resolve this issue. Afterwards, do not install any mods with TexTools. Your plugin configurations will remain, as will mods enabled in Penumbra.",
                             NotificationType.Error, TimeSpan.FromSeconds(15)));

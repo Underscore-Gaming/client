@@ -1,8 +1,8 @@
-﻿using MareSynchronos.MareConfiguration.Models;
-using MareSynchronos.UI;
+﻿using UnsungSync.MareConfiguration.Models;
+using UnsungSync.UI;
 using Microsoft.Extensions.Logging;
 
-namespace MareSynchronos.MareConfiguration.Configurations;
+namespace UnsungSync.MareConfiguration.Configurations;
 
 [Serializable]
 public class MareConfig : IMareConfiguration

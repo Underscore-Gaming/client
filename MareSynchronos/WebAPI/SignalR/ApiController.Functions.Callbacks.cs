@@ -1,16 +1,16 @@
-﻿using MareSynchronos.API.Data;
-using MareSynchronos.API.Data.Enum;
-using MareSynchronos.API.Dto;
-using MareSynchronos.API.Dto.CharaData;
-using MareSynchronos.API.Dto.Group;
-using MareSynchronos.API.Dto.User;
-using MareSynchronos.MareConfiguration.Models;
-using MareSynchronos.Services.Mediator;
+﻿using UnsungSync.API.Data;
+using UnsungSync.API.Data.Enum;
+using UnsungSync.API.Dto;
+using UnsungSync.API.Dto.CharaData;
+using UnsungSync.API.Dto.Group;
+using UnsungSync.API.Dto.User;
+using UnsungSync.MareConfiguration.Models;
+using UnsungSync.Services.Mediator;
 using Microsoft.AspNetCore.SignalR.Client;
 using Microsoft.Extensions.Logging;
 using static FFXIVClientStructs.FFXIV.Client.Game.UI.MapMarkerData.Delegates;
 
-namespace MareSynchronos.WebAPI;
+namespace UnsungSync.WebAPI;
 
 public partial class ApiController
 {

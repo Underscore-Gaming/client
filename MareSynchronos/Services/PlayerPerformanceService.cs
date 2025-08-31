@@ -1,14 +1,14 @@
-using MareSynchronos.API.Data;
-using MareSynchronos.FileCache;
-using MareSynchronos.MareConfiguration;
-using MareSynchronos.PlayerData.Handlers;
-using MareSynchronos.Services.Events;
-using MareSynchronos.Services.Mediator;
-using MareSynchronos.UI;
-using MareSynchronos.WebAPI.Files.Models;
+using UnsungSync.API.Data;
+using UnsungSync.FileCache;
+using UnsungSync.MareConfiguration;
+using UnsungSync.PlayerData.Handlers;
+using UnsungSync.Services.Events;
+using UnsungSync.Services.Mediator;
+using UnsungSync.UI;
+using UnsungSync.WebAPI.Files.Models;
 using Microsoft.Extensions.Logging;
 
-namespace MareSynchronos.Services;
+namespace UnsungSync.Services;
 
 public class PlayerPerformanceService
 {

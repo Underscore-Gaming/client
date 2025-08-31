@@ -1,11 +1,11 @@
-﻿using MareSynchronos.API.Data;
-using MareSynchronos.API.Dto;
-using MareSynchronos.API.Dto.User;
+﻿using UnsungSync.API.Data;
+using UnsungSync.API.Dto;
+using UnsungSync.API.Dto.User;
 using Microsoft.AspNetCore.SignalR.Client;
 using Microsoft.Extensions.Logging;
 using System.Text;
 
-namespace MareSynchronos.WebAPI;
+namespace UnsungSync.WebAPI;
 
 #pragma warning disable MA0040
 public partial class ApiController

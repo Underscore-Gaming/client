@@ -1,9 +1,9 @@
-﻿using MareSynchronos.FileCache;
-using MareSynchronos.Services.Mediator;
-using MareSynchronos.WebAPI.Files;
+﻿using UnsungSync.FileCache;
+using UnsungSync.Services.Mediator;
+using UnsungSync.WebAPI.Files;
 using Microsoft.Extensions.Logging;
 
-namespace MareSynchronos.PlayerData.Factories;
+namespace UnsungSync.PlayerData.Factories;
 
 public class FileDownloadManagerFactory
 {

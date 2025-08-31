@@ -3,14 +3,14 @@ using Dalamud.Interface;
 using Dalamud.Interface.Utility;
 using Dalamud.Interface.Utility.Raii;
 using Dalamud.Utility;
-using MareSynchronos.API.Data.Enum;
-using MareSynchronos.API.Data.Extensions;
-using MareSynchronos.PlayerData.Pairs;
-using MareSynchronos.Services.Mediator;
-using MareSynchronos.WebAPI;
+using UnsungSync.API.Data.Enum;
+using UnsungSync.API.Data.Extensions;
+using UnsungSync.PlayerData.Pairs;
+using UnsungSync.Services.Mediator;
+using UnsungSync.WebAPI;
 using System.Numerics;
 
-namespace MareSynchronos.UI;
+namespace UnsungSync.UI;
 
 public class TopTabMenu
 {
@@ -486,11 +486,11 @@ public class TopTabMenu
     private void DrawUserConfig(float availableWidth, float spacingX)
     {
         var buttonX = (availableWidth - spacingX) / 2f;
-        if (_uiSharedService.IconTextButton(FontAwesomeIcon.UserCircle, "Edit Mare Profile", buttonX))
+        if (_uiSharedService.IconTextButton(FontAwesomeIcon.UserCircle, "Edit Unsung Sync Profile", buttonX))
         {
             _mareMediator.Publish(new UiToggleMessage(typeof(EditProfileUi)));
         }
-        UiSharedService.AttachToolTip("Edit your Mare Profile");
+        UiSharedService.AttachToolTip("Edit your Unsung Sync Profile");
         ImGui.SameLine();
         if (_uiSharedService.IconTextButton(FontAwesomeIcon.PersonCircleQuestion, "Chara Data Analysis", buttonX))
         {

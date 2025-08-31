@@ -1,7 +1,7 @@
-﻿using MareSynchronos.API.Data;
-using MareSynchronos.API.Dto.CharaData;
+﻿using UnsungSync.API.Data;
+using UnsungSync.API.Dto.CharaData;
 
-namespace MareSynchronos.Services.CharaData.Models;
+namespace UnsungSync.Services.CharaData.Models;
 
 public sealed record CharaDataExtendedUpdateDto : CharaDataUpdateDto
 {

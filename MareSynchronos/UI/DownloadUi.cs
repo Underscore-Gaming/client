@@ -1,16 +1,16 @@
 ﻿using Dalamud.Bindings.ImGui;
 using Dalamud.Interface.Colors;
-using MareSynchronos.MareConfiguration;
-using MareSynchronos.PlayerData.Handlers;
-using MareSynchronos.Services;
-using MareSynchronos.Services.Mediator;
-using MareSynchronos.WebAPI.Files;
-using MareSynchronos.WebAPI.Files.Models;
+using UnsungSync.MareConfiguration;
+using UnsungSync.PlayerData.Handlers;
+using UnsungSync.Services;
+using UnsungSync.Services.Mediator;
+using UnsungSync.WebAPI.Files;
+using UnsungSync.WebAPI.Files.Models;
 using Microsoft.Extensions.Logging;
 using System.Collections.Concurrent;
 using System.Numerics;
 
-namespace MareSynchronos.UI;
+namespace UnsungSync.UI;
 
 public class DownloadUi : WindowMediatorSubscriberBase
 {
@@ -23,7 +23,7 @@ public class DownloadUi : WindowMediatorSubscriberBase
 
     public DownloadUi(ILogger<DownloadUi> logger, DalamudUtilService dalamudUtilService, MareConfigService configService,
         FileUploadManager fileTransferManager, MareMediator mediator, UiSharedService uiShared, PerformanceCollectorService performanceCollectorService)
-        : base(logger, mediator, "Mare Synchronos Downloads", performanceCollectorService)
+        : base(logger, mediator, "Unsung Sync Downloads", performanceCollectorService)
     {
         _dalamudUtilService = dalamudUtilService;
         _configService = configService;

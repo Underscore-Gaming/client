@@ -1,7 +1,7 @@
-﻿using MareSynchronos.Services.Mediator;
+﻿using UnsungSync.Services.Mediator;
 using Microsoft.Extensions.Logging;
 
-namespace MareSynchronos.Interop.Ipc;
+namespace UnsungSync.Interop.Ipc;
 
 public sealed partial class IpcManager : DisposableMediatorSubscriberBase
 {

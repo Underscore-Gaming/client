@@ -1,4 +1,4 @@
-﻿namespace MareSynchronos.WebAPI.Files.Models;
+﻿namespace UnsungSync.WebAPI.Files.Models;
 
 public enum DownloadStatus
 {

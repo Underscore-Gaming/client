@@ -1,17 +1,17 @@
 ﻿using Dalamud.Utility;
 using K4os.Compression.LZ4.Legacy;
-using MareSynchronos.API.Data;
-using MareSynchronos.API.Dto.Files;
-using MareSynchronos.API.Routes;
-using MareSynchronos.FileCache;
-using MareSynchronos.PlayerData.Handlers;
-using MareSynchronos.Services.Mediator;
-using MareSynchronos.WebAPI.Files.Models;
+using UnsungSync.API.Data;
+using UnsungSync.API.Dto.Files;
+using UnsungSync.API.Routes;
+using UnsungSync.FileCache;
+using UnsungSync.PlayerData.Handlers;
+using UnsungSync.Services.Mediator;
+using UnsungSync.WebAPI.Files.Models;
 using Microsoft.Extensions.Logging;
 using System.Net;
 using System.Net.Http.Json;
 
-namespace MareSynchronos.WebAPI.Files;
+namespace UnsungSync.WebAPI.Files;
 
 public partial class FileDownloadManager : DisposableMediatorSubscriberBase
 {

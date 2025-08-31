@@ -1,17 +1,17 @@
 ﻿using Dalamud.Game.Gui.ContextMenu;
 using Dalamud.Game.Text.SeStringHandling;
-using MareSynchronos.API.Data;
-using MareSynchronos.API.Data.Enum;
-using MareSynchronos.API.Data.Extensions;
-using MareSynchronos.API.Dto.User;
-using MareSynchronos.PlayerData.Factories;
-using MareSynchronos.PlayerData.Handlers;
-using MareSynchronos.Services.Mediator;
-using MareSynchronos.Services.ServerConfiguration;
-using MareSynchronos.Utils;
+using UnsungSync.API.Data;
+using UnsungSync.API.Data.Enum;
+using UnsungSync.API.Data.Extensions;
+using UnsungSync.API.Dto.User;
+using UnsungSync.PlayerData.Factories;
+using UnsungSync.PlayerData.Handlers;
+using UnsungSync.Services.Mediator;
+using UnsungSync.Services.ServerConfiguration;
+using UnsungSync.Utils;
 using Microsoft.Extensions.Logging;
 
-namespace MareSynchronos.PlayerData.Pairs;
+namespace UnsungSync.PlayerData.Pairs;
 
 public class Pair
 {
@@ -71,7 +71,7 @@ public class Pair
             Name = openProfileSeString,
             OnClicked = (a) => _mediator.Publish(new ProfileOpenStandaloneMessage(this)),
             UseDefaultPrefix = false,
-            PrefixChar = 'M',
+            PrefixChar = 'U',
             PrefixColor = 526
         });
 
@@ -80,7 +80,7 @@ public class Pair
             Name = reapplyDataSeString,
             OnClicked = (a) => ApplyLastReceivedData(forced: true),
             UseDefaultPrefix = false,
-            PrefixChar = 'M',
+            PrefixChar = 'U',
             PrefixColor = 526
         });
 
@@ -89,7 +89,7 @@ public class Pair
             Name = changePermissions,
             OnClicked = (a) => _mediator.Publish(new OpenPermissionWindow(this)),
             UseDefaultPrefix = false,
-            PrefixChar = 'M',
+            PrefixChar = 'U',
             PrefixColor = 526
         });
 
@@ -98,7 +98,7 @@ public class Pair
             Name = cyclePauseState,
             OnClicked = (a) => _mediator.Publish(new CyclePauseMessage(UserData)),
             UseDefaultPrefix = false,
-            PrefixChar = 'M',
+            PrefixChar = 'U',
             PrefixColor = 526
         });
     }

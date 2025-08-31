@@ -1,15 +1,15 @@
-﻿using MareSynchronos.API.Data.Enum;
-using MareSynchronos.MareConfiguration;
-using MareSynchronos.MareConfiguration.Configurations;
-using MareSynchronos.PlayerData.Data;
-using MareSynchronos.PlayerData.Handlers;
-using MareSynchronos.Services;
-using MareSynchronos.Services.Mediator;
-using MareSynchronos.Utils;
+﻿using UnsungSync.API.Data.Enum;
+using UnsungSync.MareConfiguration;
+using UnsungSync.MareConfiguration.Configurations;
+using UnsungSync.PlayerData.Data;
+using UnsungSync.PlayerData.Handlers;
+using UnsungSync.Services;
+using UnsungSync.Services.Mediator;
+using UnsungSync.Utils;
 using Microsoft.Extensions.Logging;
 using System.Collections.Concurrent;
 
-namespace MareSynchronos.FileCache;
+namespace UnsungSync.FileCache;
 
 public sealed class TransientResourceManager : DisposableMediatorSubscriberBase
 {

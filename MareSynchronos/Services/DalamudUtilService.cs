@@ -11,12 +11,12 @@ using FFXIVClientStructs.FFXIV.Client.Game.Control;
 using FFXIVClientStructs.FFXIV.Client.Graphics.Scene;
 using FFXIVClientStructs.FFXIV.Client.UI.Agent;
 using Lumina.Excel.Sheets;
-using MareSynchronos.API.Dto.CharaData;
-using MareSynchronos.Interop;
-using MareSynchronos.MareConfiguration;
-using MareSynchronos.PlayerData.Handlers;
-using MareSynchronos.Services.Mediator;
-using MareSynchronos.Utils;
+using UnsungSync.API.Dto.CharaData;
+using UnsungSync.Interop;
+using UnsungSync.MareConfiguration;
+using UnsungSync.PlayerData.Handlers;
+using UnsungSync.Services.Mediator;
+using UnsungSync.Utils;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using System.Numerics;
@@ -24,7 +24,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using GameObject = FFXIVClientStructs.FFXIV.Client.Game.Object.GameObject;
 
-namespace MareSynchronos.Services;
+namespace UnsungSync.Services;
 
 public class DalamudUtilService : IHostedService, IMediatorSubscriber
 {

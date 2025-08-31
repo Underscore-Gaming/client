@@ -1,6 +1,6 @@
-﻿using MareSynchronos.MareConfiguration.Configurations;
+﻿using UnsungSync.MareConfiguration.Configurations;
 
-namespace MareSynchronos.MareConfiguration;
+namespace UnsungSync.MareConfiguration;
 
 public class ServerConfigService : ConfigurationServiceBase<ServerConfig>
 {

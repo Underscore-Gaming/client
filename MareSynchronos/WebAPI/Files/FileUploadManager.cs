@@ -1,17 +1,17 @@
-﻿using MareSynchronos.API.Data;
-using MareSynchronos.API.Dto.Files;
-using MareSynchronos.API.Routes;
-using MareSynchronos.FileCache;
-using MareSynchronos.MareConfiguration;
-using MareSynchronos.Services.Mediator;
-using MareSynchronos.Services.ServerConfiguration;
-using MareSynchronos.UI;
-using MareSynchronos.WebAPI.Files.Models;
+﻿using UnsungSync.API.Data;
+using UnsungSync.API.Dto.Files;
+using UnsungSync.API.Routes;
+using UnsungSync.FileCache;
+using UnsungSync.MareConfiguration;
+using UnsungSync.Services.Mediator;
+using UnsungSync.Services.ServerConfiguration;
+using UnsungSync.UI;
+using UnsungSync.WebAPI.Files.Models;
 using Microsoft.Extensions.Logging;
 using System.Net.Http.Headers;
 using System.Net.Http.Json;
 
-namespace MareSynchronos.WebAPI.Files;
+namespace UnsungSync.WebAPI.Files;
 
 public sealed class FileUploadManager : DisposableMediatorSubscriberBase
 {

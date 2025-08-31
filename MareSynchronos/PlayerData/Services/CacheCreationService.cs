@@ -1,12 +1,12 @@
-﻿using MareSynchronos.API.Data.Enum;
-using MareSynchronos.PlayerData.Data;
-using MareSynchronos.PlayerData.Factories;
-using MareSynchronos.PlayerData.Handlers;
-using MareSynchronos.Services;
-using MareSynchronos.Services.Mediator;
+﻿using UnsungSync.API.Data.Enum;
+using UnsungSync.PlayerData.Data;
+using UnsungSync.PlayerData.Factories;
+using UnsungSync.PlayerData.Handlers;
+using UnsungSync.Services;
+using UnsungSync.Services.Mediator;
 using Microsoft.Extensions.Logging;
 
-namespace MareSynchronos.PlayerData.Services;
+namespace UnsungSync.PlayerData.Services;
 
 public sealed class CacheCreationService : DisposableMediatorSubscriberBase
 {

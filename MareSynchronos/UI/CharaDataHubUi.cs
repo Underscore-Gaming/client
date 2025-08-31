@@ -4,19 +4,19 @@ using Dalamud.Interface.Colors;
 using Dalamud.Interface.ImGuiFileDialog;
 using Dalamud.Interface.Utility;
 using Dalamud.Interface.Utility.Raii;
-using MareSynchronos.API.Dto.CharaData;
-using MareSynchronos.MareConfiguration;
-using MareSynchronos.MareConfiguration.Models;
-using MareSynchronos.PlayerData.Pairs;
-using MareSynchronos.Services;
-using MareSynchronos.Services.CharaData;
-using MareSynchronos.Services.CharaData.Models;
-using MareSynchronos.Services.Mediator;
-using MareSynchronos.Services.ServerConfiguration;
-using MareSynchronos.Utils;
+using UnsungSync.API.Dto.CharaData;
+using UnsungSync.MareConfiguration;
+using UnsungSync.MareConfiguration.Models;
+using UnsungSync.PlayerData.Pairs;
+using UnsungSync.Services;
+using UnsungSync.Services.CharaData;
+using UnsungSync.Services.CharaData.Models;
+using UnsungSync.Services.Mediator;
+using UnsungSync.Services.ServerConfiguration;
+using UnsungSync.Utils;
 using Microsoft.Extensions.Logging;
 
-namespace MareSynchronos.UI;
+namespace UnsungSync.UI;
 
 internal sealed partial class CharaDataHubUi : WindowMediatorSubscriberBase
 {
@@ -79,7 +79,7 @@ internal sealed partial class CharaDataHubUi : WindowMediatorSubscriberBase
                          UiSharedService uiSharedService, ServerConfigurationManager serverConfigurationManager,
                          DalamudUtilService dalamudUtilService, FileDialogManager fileDialogManager, PairManager pairManager,
                          CharaDataGposeTogetherManager charaDataGposeTogetherManager)
-        : base(logger, mediator, "Mare Synchronos Character Data Hub###MareSynchronosCharaDataUI", performanceCollectorService)
+        : base(logger, mediator, "Unsung Sync Character Data Hub###UnsungSyncCharaDataUI", performanceCollectorService)
     {
         SetWindowSizeConstraints();
 
@@ -863,9 +863,9 @@ internal sealed partial class CharaDataHubUi : WindowMediatorSubscriberBase
 
     private void DrawMcdfExport()
     {
-        _uiSharedService.BigText("Mare Character Data File Export");
+        _uiSharedService.BigText("Unsung Sync Character Data File Export");
 
-        DrawHelpFoldout("This feature allows you to pack your character into a MCDF file and manually send it to other people. MCDF files can officially only be imported during GPose through Mare. " +
+        DrawHelpFoldout("This feature allows you to pack your character into a MCDF file and manually send it to other people. MCDF files can officially only be imported during GPose through Unsung Sync. " +
             "Be aware that the possibility exists that people write unofficial custom exporters to extract the containing data.");
 
         ImGuiHelpers.ScaledDummy(5);

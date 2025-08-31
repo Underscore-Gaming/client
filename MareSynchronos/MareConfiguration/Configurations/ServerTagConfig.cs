@@ -1,6 +1,6 @@
-﻿using MareSynchronos.MareConfiguration.Models;
+﻿using UnsungSync.MareConfiguration.Models;
 
-namespace MareSynchronos.MareConfiguration.Configurations;
+namespace UnsungSync.MareConfiguration.Configurations;
 
 public class ServerTagConfig : IMareConfiguration
 {

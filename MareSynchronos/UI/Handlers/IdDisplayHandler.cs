@@ -1,13 +1,13 @@
 ﻿using Dalamud.Bindings.ImGui;
 using Dalamud.Interface;
 using Dalamud.Interface.Utility.Raii;
-using MareSynchronos.API.Dto.Group;
-using MareSynchronos.MareConfiguration;
-using MareSynchronos.PlayerData.Pairs;
-using MareSynchronos.Services.Mediator;
-using MareSynchronos.Services.ServerConfiguration;
+using UnsungSync.API.Dto.Group;
+using UnsungSync.MareConfiguration;
+using UnsungSync.PlayerData.Pairs;
+using UnsungSync.Services.Mediator;
+using UnsungSync.Services.ServerConfiguration;
 
-namespace MareSynchronos.UI.Handlers;
+namespace UnsungSync.UI.Handlers;
 
 public class IdDisplayHandler
 {

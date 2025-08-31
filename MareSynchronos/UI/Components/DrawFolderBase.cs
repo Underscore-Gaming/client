@@ -1,11 +1,11 @@
 ﻿using Dalamud.Bindings.ImGui;
 using Dalamud.Interface;
 using Dalamud.Interface.Utility.Raii;
-using MareSynchronos.PlayerData.Pairs;
-using MareSynchronos.UI.Handlers;
+using UnsungSync.PlayerData.Pairs;
+using UnsungSync.UI.Handlers;
 using System.Collections.Immutable;
 
-namespace MareSynchronos.UI.Components;
+namespace UnsungSync.UI.Components;
 
 public abstract class DrawFolderBase : IDrawFolder
 {
